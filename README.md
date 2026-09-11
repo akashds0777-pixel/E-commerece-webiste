@@ -23,10 +23,14 @@ Existing off-the-shelf solutions are frequently either too rigid to customize fo
 Research on e-commerce systems has evolved along several connected directions, spanning system architecture, security, user experience, and personalization. Early work on web-based transaction systems established the foundational client-server and three-tier architectures that separate presentation, business logic, and data layers, a pattern that remains the backbone of most modern e-commerce platforms. Building on this, later studies examined the role of relational and NoSQL databases in handling large, rapidly changing product catalogues and high-volume transactional data, highlighting trade-offs between consistency and scalability in online retail systems.
 A second major thread of research addresses security and trust in online transactions. Studies on payment gateway integration and the Payment Card Industry Data Security Standard (PCI-DSS) emphasize encryption, tokenization, and secure socket layer (SSL/TLS) protocols as essential safeguards against fraud and data breaches in web-based commerce. Related work on authentication mechanisms, including multi-factor authentication and OAuth-based single sign-on, demonstrates how identity verification can be strengthened without significantly degrading user convenience, a balance that is critical to reducing cart abandonment.
 A third line of research focuses on the customer experience and business intelligence side of e-commerce. Work on recommendation systems shows that collaborative filtering and content-based algorithms can meaningfully increase average order value by surfacing relevant products based on browsing and purchase history. Complementary studies on user interface design for online retail find that page-load speed, mobile responsiveness, and simplified checkout flows are strong predictors of conversion rate, while analytics-driven dashboards give business owners actionable insight into sales trends, inventory turnover, and customer behaviour, supporting more informed operational and marketing decisions.
+
 6. PROPOSED SYSTEM / PROPOSED METHODOLOGY
+   
 The proposed system is a web-based e-commerce platform consisting of a customer-facing storefront and an administrator-facing management console, built on a layered architecture. The presentation layer renders the product catalogue, search results, cart, and checkout pages, and communicates with the backend through a REST API. The business logic layer handles core operations such as inventory checks, price calculation, discount application, order processing, and payment verification.
 The data layer stores structured information about users, products, categories, orders, payments, and reviews in a relational database, while a caching layer improves the responsiveness of frequently accessed pages such as the homepage and product listings. Payment processing is delegated to a third-party payment gateway to ensure PCI-compliant handling of card data, and order status updates are pushed to customers via email or SMS notifications. The admin console provides CRUD operations on products and categories, order fulfilment tracking, customer management, and basic sales reporting.
-7. HARDWARE AND SOFTWARE REQUIREMENTS
+
+7.  HARDWARE AND SOFTWARE REQUIREMENTS
+   
 Hardware Requirements
 ●	Processor: Intel Core i5 or equivalent
 ●	RAM: Minimum 8 GB
@@ -41,7 +45,9 @@ Software Requirements
 ●	IDE: Visual Studio Code
 ●	Version Control: Git and GitHub
 ●	Hosting/Deployment: AWS / Vercel / Heroku
-8. METHODOLOGY / SYSTEM DESIGN
+
+8.  METHODOLOGY / SYSTEM DESIGN
+   
 The system follows a standard software engineering methodology divided into three phases: requirement analysis, system design, and implementation.
 1. Requirement Analysis
 This phase identifies functional requirements such as user registration and login, product browsing and search, cart management, secure checkout, order tracking, and admin-side product and order management, along with non-functional requirements including page-load performance, scalability to handle concurrent users, data security, and mobile responsiveness. It also identifies key stakeholders (customers, administrators, delivery partners) and the data needed to support each workflow.
@@ -50,7 +56,7 @@ The system is designed as a layered architecture comprising a presentation layer
 3. Implementation
 Implementation builds each layer defined above: the frontend storefront and admin dashboard are developed and connected to backend REST APIs; the database is created and populated with sample product and category data; the payment gateway is integrated in sandbox mode and tested for successful and failed transaction flows; and notification, search, and review modules are added incrementally. The implementation phase also includes functional testing of the cart-to-checkout flow, load testing of the product listing pages, and security testing of the login and payment modules.
 
-Fig. 1. Flow diagram of the e-commerce website system.
+Flow diagram of the e-commerce website system.
 User Registration / Login (Authentication)
 ↓
 Product Browsing, Search & Filtering
@@ -75,21 +81,33 @@ Data Layer: Relational Database (Products, Orders, Users, Payments) + Cache
 External Services: Payment Gateway, Email/SMS Notification Service
  
 8. EXPECTED OUTCOME
+
 1. A fully functional e-commerce website supporting end-to-end product browsing to order delivery.
 2. Secure user authentication and a smooth, low-friction checkout experience.
 3. An admin dashboard for real-time management of products, orders, and customers.
 4. Reduced manual effort in inventory and order tracking through automation.
 5. A scalable foundation that can be extended with recommendations, analytics, and mobile apps.
+   
 9. APPLICATIONS
+    
 Industry relevance
+
 E-commerce websites are directly applicable to retail, fashion, electronics, grocery, and D2C (direct-to-consumer) brands seeking to establish an independent online sales channel without relying entirely on third-party marketplaces. Small and medium businesses can use such a platform to reach a wider customer base, reduce dependency on physical storefronts, and gain full control over branding, pricing, and customer data, while integrated analytics support data-driven inventory and marketing decisions.
+
 Academic or research use
+
 From a research perspective, e-commerce platforms serve as a practical domain for studying web application architecture, database design for high-volume transactional systems, secure payment integration, and recommendation algorithms. Student projects in this space commonly explore performance optimization for product search, A/B testing of checkout flows, and the effectiveness of personalization techniques in increasing conversion rates.
+
 Government or social applications
+
 E-commerce infrastructure also underpins government and social initiatives such as digital marketplaces for rural artisans and farmers, public distribution and e-governance portals for service delivery, and cooperative platforms that help local self-help groups sell products online. A reliable, low-cost e-commerce framework can help such initiatives reach broader markets while maintaining transparency in transactions and inventory.
-10. CONCLUSION
+
+11. CONCLUSION
+    
 As consumer behaviour continues to shift toward online shopping, a reliable, secure, and easy-to-manage e-commerce website has become essential for businesses of every size. The proposed system combines a responsive storefront, secure authentication, an integrated payment gateway, and a comprehensive admin dashboard to deliver a complete online shopping experience for customers and an efficient management tool for business owners. By following a structured requirement analysis, layered system design, and phased implementation approach, the project aims to deliver a scalable and maintainable platform. Overall, the proposed e-commerce website offers an effective, end-to-end solution for enabling online retail operations.
-11. REFERENCES
+
+13. REFERENCES
+    
 1. Laudon, K. C., & Traver, C. G. (2021). E-commerce 2021: Business, Technology, Society. Pearson Education.
 2. Turban, E., Outland, J., King, D., Lee, J. K., Liang, T. P., & Turban, D. C. (2018). Electronic Commerce 2018: A Managerial and Social Networks Perspective. Springer.
 3. Chaffey, D. (2019). Digital Business and E-Commerce Management: Strategy, Implementation and Practice. Pearson.
