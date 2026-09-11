@@ -65,6 +65,3 @@ Traditional shopping requires customers to visit physical stores, which is time-
 ### 9. Conclusion
 This project demonstrates how an e-commerce platform simplifies buying and selling by leveraging web technology, benefiting both customers and businesses.
 
----
-
-Want me to turn this into an actual **Word document / PPT** for submission, or do you need the **working code** (HTML/CSS/React or PHP) for any specific module like login, product page, or cart?
